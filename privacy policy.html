@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoveX Privacy Policy</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      color: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      animation: fadeDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      animation: glowText 3s infinite alternate;
+    }
+
+    header p {
+      opacity: 0.9;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: rgba(30, 41, 59, 0.85);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      color: #60a5fa;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #94a3b8;
+      animation: fadeUp 1s ease;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #fff; }
+      to { text-shadow: 0 0 25px #60a5fa; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style></head><body><header>
+  <h1>MoveX Privacy Policy</h1>
+  <p>Your privacy matters to us</p>
+</header><div class="container">  <div class="card">
+    <p>
+      MoveX values your privacy and is committed to protecting your personal information. 
+      This Privacy Policy explains how we collect, use, store, and safeguard your data when you use our application.
+    </p>
+  </div>  <div class="card">
+    <h2>Information We Collect</h2>
+    <p>
+      We may collect non-personal information such as device type, operating system, app version, 
+      language preference, and general usage data.
+    </p>
+  </div>  <div class="card">
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>Improve app performance and stability</li>
+      <li>Fix bugs and technical issues</li>
+      <li>Enhance user experience</li>
+      <li>Analyze usage trends</li>
+    </ul>
+  </div>  <div class="card">
+    <h2>Third-Party Services</h2>
+    <p>
+      MoveX may use third-party services such as analytics and ads.
+    </p>
+  </div>  <div class="card">
+    <h2>Data Security</h2>
+    <p>
+      We take appropriate measures to protect your data.
+    </p>
+  </div></div><footer>
+  © 2026 MoveX. All rights reserved.
+</footer><script>
+  // Scroll animation
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+</script></body>
+</html>
